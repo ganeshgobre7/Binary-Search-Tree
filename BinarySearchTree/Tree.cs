@@ -52,6 +52,24 @@ namespace BinarySearchTree
                 this.Right.display();
             }
         }
-
+        public bool find(Gtype element,Tree<Gtype> node)
+        {
+            if (node == null)
+                return false;
+            if(node.Data.Equals(element))
+            {
+                Console.WriteLine("Element is Found :" + " " + node.Data);
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Current Element {0} in Binary Tree", node.Data);
+                if (element.CompareTo(node.Data) < 0)
+                    find(element, node.Left);
+                if (element.CompareTo(node.Data) > 0)
+                    find(element, node.Right);
+                return true;
+            }
+        }
     }
 }

@@ -20,8 +20,10 @@ namespace BinarySearchTree
             bst.insert(16);
             bst.insert(63);
             bst.insert(67);
-
             bst.display();
+            Console.WriteLine("Searching 63 in Tree");
+            bool result = bst.find(63, bst);
+            Console.WriteLine(result);
         }
     }
 }
